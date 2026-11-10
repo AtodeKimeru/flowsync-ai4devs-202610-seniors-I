@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "instructions": [
+    "AGENTS.md",
+    "docs/base-standards.md"
+  ],
+  "skills": [
+    "ai-specs/skills"
+  ],
+  "agents": {
+    "adversarial-reviewer": {
+      "mode": "subagent"
+    }
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write|Edit",
+        "hooks": [
+          {
+            "type": "command",
+            "statusMessage": "Formateando frontend con Prettier...",
+            "timeout": 30,
+            "command": "jq -r '.tool_response.filePath // .tool_input.file_path // empty' | { read -r f; case \"$f\" in \"$CLAUDE_PROJECT_DIR\"/frontend/*) cd \"$CLAUDE_PROJECT_DIR/frontend\" && ./node_modules/.bin/prettier --write --ignore-unknown \"$f\";; esac; } 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}
