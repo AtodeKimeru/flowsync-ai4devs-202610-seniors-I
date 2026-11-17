@@ -11,8 +11,5 @@
     "adversarial-reviewer": {
       "mode": "subagent"
     }
-  },
-  "plugins": [
-    "./.opencode/plugins/prettier-formatter.ts"
-  ]
+  }
 }
