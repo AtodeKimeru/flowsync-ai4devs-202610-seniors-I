@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "private": true,
+  "devDependencies": {
+    "@opencode/plugin": "2.3.2",
+    "@types/node": "*",
+    "typescript": "6.0.3"
+  }
+}
