@@ -20,10 +20,10 @@ Borra el ejemplo de abajo cuando escribas el primero.
 
 ---
 
-## Prompt 1
+## Prompt 0
 
-**Modelo:** Opus 1M xHigh
-**Herramienta:** Claude Code
+**Modelo:** DeepSeek v4.1 flash free
+**Herramienta:** Open Code
 
 ```
 Este es el ejemplo. Bórralo.
@@ -33,3 +33,20 @@ para que se sepa dónde empieza y dónde acaba.
 ```
 
 **Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+
+---
+
+## Prompt 1
+
+**Modelo:** DeepSeek v4.1 flash free
+**Herramienta:** Open Code
+
+```
+Este es el ejemplo. Bórralo.
+
+El prompt va aquí dentro, entero y con sus saltos de línea,
+para que se sepa dónde empieza y dónde acaba.
+```
+
+**Qué salió:** (opcional, una línea) funcionó a la primera / tuve que insistir / me inventó una ruta que no existe.
+
